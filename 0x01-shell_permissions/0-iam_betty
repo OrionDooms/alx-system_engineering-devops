@@ -1,2 +1,2 @@
 #!/bin/bash
-chown -R /n
+chown -R/n
