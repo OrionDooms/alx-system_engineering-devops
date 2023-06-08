@@ -1,2 +1,2 @@
 #!/bin/bash
-chown/n
+sudo chown betty:betty 0-iam_betty 
