@@ -1,2 +1,2 @@
 #!/bin/bash
-touch -c -t 202309201425 hello
+chmod 753 hello
