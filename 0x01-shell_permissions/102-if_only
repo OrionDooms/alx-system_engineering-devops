@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo find hello -name guillaume chown -R betty hello
+sudo chown --from=guillaume betty hello
