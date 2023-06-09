@@ -1,0 +1,2 @@
+#!/bin/bash
+su telnet towel.blinkenlights.nl 
