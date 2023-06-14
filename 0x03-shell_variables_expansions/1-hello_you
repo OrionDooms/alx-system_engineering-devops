@@ -1,2 +1,2 @@
 #!/bin/bash
-alias hello\ user='uname id'
+alias hello\ user='id'
