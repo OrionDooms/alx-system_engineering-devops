@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #Bash script that displays content in the current directory
 array=( $( ls . ) )
-for a in "${!array[@]}"
-do
+for a in "${!array[@]}"; do
         echo "${array[$a]}" | cut -d '-' -f2
 done
