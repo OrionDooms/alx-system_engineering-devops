@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Bash script that displays the PID, along with the process name
+sleep 100 &
+pid1=$!
+sleep 200 &
+pid2=$!
+echo $pid1 "bash"
+echo $pid2 "bash"
