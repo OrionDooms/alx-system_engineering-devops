@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 #Bash script that displays content in the current directory
-array=( $( ls . ) )
-i=0
-while [ $i -lt ${#array[@]} ]
+arrays=( $( ls . ) )
+for array in "${!arrays[@]}"
 do
-        echo "${array[i]}" | cut -d '-' -f2
-        (( i++ ))
+        echo "${arrays[$array]}" | cut -d '-' -f2
 done
