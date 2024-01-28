@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-cat /etc/passwd
+#Bash script that displays the content of the file /etc/passwd
+file=/etc/passwd
+while IFS=: read -r user enpass uid gid desc home shell
+do
+	[ $uid ] && echo "$user:$uid:$home"
+done < "$file"
