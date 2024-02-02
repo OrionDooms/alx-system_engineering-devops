@@ -3,5 +3,5 @@
 ip_=$(hostname -I)
 for ip in "${ip_[@]}";
 do
-	printf "$ip\n"
+	printf "%s\n" "$ip"
 done
