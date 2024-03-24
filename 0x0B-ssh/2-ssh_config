@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#show local SSH Client by create a client configuration file
 Host 459245-web-01
 	IdentityFiile ~/.ssh/school
 	PasswordAuthentication no
