@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+Host 459245-web-01
+	IdentityFiile ~/.ssh/school
+	PasswordAuthentication no
