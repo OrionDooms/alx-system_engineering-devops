@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Create an SSH key pair with a private key called school.
+#4096 of bits and must be protected by the passphras.
+bits="4096"
+Name="school"
+pass="betty"
+ssh-keygen -t rsa -b $bits -f $Name -N $pass
