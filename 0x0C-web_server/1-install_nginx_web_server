@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#A bash script that install nginx
+sudo apt-get update -y
+sudo apt-get install nginx -y
+echo "<!DOCTYPE html>
+<head>
+<title>Hello World!
+</title>
+</head>
+<body>Hello World!</body>
+</html> =" | sudo tee /var/www/html/index.html
+sudo service nginx start
