@@ -1,5 +1,15 @@
 #!/usr/bin/pup
 #show local SSH Client by create a client configuration file
+<<<<<<< HEAD
+=======
+class ssh {
+  file {'~/.ssh/school':
+    path                   => 'ect/ssh/ssh_config',
+    line                   => 'IdentityFile ~/.ssh/school',
+    passwordAuthentication => 'no',
+    notify                 => Service['ssh']
+  }
+>>>>>>> 96972039eec1a43694e634aae153b458c7a9020d
 
 file { 'ect/ssh/ssh_config':
 	ensure  => 'present',
