@@ -9,5 +9,6 @@ echo "<!DOCTYPE html>
 </head>
 <body>Hello World!</body>
 </html> =" | sudo tee /var/www/html/index.html
-sudo sed -i '/server {/a \ location /redirect_me {\return 301 http://www.youtube.com/watch?v=QH2-TGUlwu4/ew_page;\}' /etc/nginx/nginx.conf
+website="www.youtube.com/watch?v=QH2-TGUlwu4"
+sudo sed -i '/server {/a \ location /redirect_me {\return 301 http://$website/new_page;\}' /etc/nginx/nginx.conf
 sudo service nginx restart
