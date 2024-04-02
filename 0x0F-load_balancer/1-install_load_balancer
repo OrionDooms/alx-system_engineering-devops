@@ -3,7 +3,7 @@
 sudo apt-get install -y haproxy
 echo "ENABLED=1" >> /etc/default/haproxy
 
-configure_haproxy(){
+configure_server(){
         echo "" >> /etc/haproxy/haproxy.cfg
         echo "backend mybackend" >> /etc/haproxy/haproxy.cfg
         echo "server 459245-web-01 35.153.67.140 check" >> /etc/haproxy/haproxy.cfg
