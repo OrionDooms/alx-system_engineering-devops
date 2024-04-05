@@ -1,5 +1,5 @@
 #/usr/bin/env bash
 #Configures script that make your fix short and sweet
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
-nginx_pid=$(pgrep 'nginx')
-kill $nginx_pid
+kill -9 $(pidof nginx)
