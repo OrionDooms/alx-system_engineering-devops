@@ -1,7 +1,5 @@
 #/usr/bin/env bash
 #Configures script that fix an error that fail to connect to 0 port 80.
-sudo apt-get update
-sudo apt-get install nginx
 #first remove sites-enabled default file.
 sudo rm /etc/nginx/sites-enabled/default
 
@@ -10,3 +8,4 @@ sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 #Then restart nginx.
 sudo service nginx restart
+~                           
