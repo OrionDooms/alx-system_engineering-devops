@@ -1,1 +1,7 @@
-#!/usr/bin/env bash
+#/usr/bin/env bash
+#Configures script that fix an error that fail to connect to 0 port 80.
+#first remove sites-enabled default file, then link sites-available default file
+# to sites-enabled default file and then restart nginx.
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
