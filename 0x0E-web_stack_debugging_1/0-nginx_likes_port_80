@@ -2,10 +2,10 @@
 #Configures script that fix an error that fail to connect to 0 port 80.
 
 #first remove sites-enabled default file.
-rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
 
 #Then link sites-available default file to sites-enabled default file.
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 #Then restart nginx.
-service nginx restart
+sudo service nginx restart
