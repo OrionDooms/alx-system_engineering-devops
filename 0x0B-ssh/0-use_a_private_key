@@ -3,4 +3,4 @@
 key_path=~/.ssh/school
 user=ubuntu
 IP_address=35.153.67.140
-ssh $key_path $user@$IP_address
+ssh -i $key_path $user@$IP_address
