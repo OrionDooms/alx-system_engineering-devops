@@ -14,6 +14,7 @@ echo "<!DOCTYPE html>
 #This Configures a custom response HTTP header.
 path="/etc/nginx/sites-available/default"
 sudo sed -i "/server_name _/a add_header X-server-by $HOSTNAME;" $path
-
+#Check for 
+sudo nginx -t
 #Restart nginx
 sudo service nginx restart
