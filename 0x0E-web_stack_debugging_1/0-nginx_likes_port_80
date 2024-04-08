@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #Configures script that fix an error that fail to connect to 0 port 80.
 sudo apt install nginx
 ln -sf /etc/nginx/sites-available/default  /etc/nginx/sites-enabled/default
