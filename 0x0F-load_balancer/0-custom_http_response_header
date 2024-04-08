@@ -11,12 +11,10 @@ echo "<!DOCTYPE html>
 <body>Hello World!</body>
 </html>" | sudo tee /var/www/html/index.html
 
-custom_header="a add_header X-server-by"
+#This Configures a custom response HTTP header.
 path="/etc/nginx/sites-available/default"
-sudo sed -i "/server_name _/$custom_header $HOSTNAME:" $path
-
-path="/etc/nginx/sites-available/default"
-sudo sed -i "/server_name _/a add_header X-server-by $HOSTNAME:" $path
-
-nginx -t
-sudo service nginx reload
+sudo sed -i "/server_name _/a add_header X-server-by $HOSTNAME;" $path
+#Check for 
+sudo nginx -t
+#Restart nginx
+sudo service nginx restart

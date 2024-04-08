@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #Using ssh connect to server using the private key ~/.ssh/school.
-key_path=~/.ssh/school
-user=ubuntu
-IP_address=35.153.67.140
-ssh $key_path $user@$IP_address
+#key_path ~/.ssh/school, user ubuntu, IP_address 35.153.67.140
+ssh -i ~/.ssh/school ubuntu@35.153.67.140

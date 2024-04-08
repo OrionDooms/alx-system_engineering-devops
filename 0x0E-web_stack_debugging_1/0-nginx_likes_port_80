@@ -1,6 +1,13 @@
 #/usr/bin/env bash
+<<<<<<< HEAD
 #Configures script that make your fix short and sweet
 sudo apt install nginx
 nginx_pid=$(pgrep 'nginx')
 kill $nginx_pid
 sudo service nginx restart
+=======
+#Configures script that fix an error that fail to connect to 0 port 80.
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart      
+>>>>>>> eea7e8b36a18afdce9b4e7371fc47c9fbf21b4b1
