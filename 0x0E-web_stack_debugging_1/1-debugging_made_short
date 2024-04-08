@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #Configures script that make your fix short and sweet
-sudo service nginx restart
+ln -sf /etc/nginx/sites-available/default  /etc/nginx/sites-enabled/default
 pkill apache2
 sudo service nginx restart
