@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#A Bash script that can take in a argument should run the whoami command 
+#under the new user passed as an argument
+a=$1
+sudo -u $a whoami
