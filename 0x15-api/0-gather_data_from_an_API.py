@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-#Using the REST API to take in a employee ID that would returns information
-#about his/her TODO list progress.
+""" Using the REST API to take in a employee ID that would returns information
+about his/her TODO list progress."""
+
+
 import requests
 import sys
 
-#This function Get_todo_list Takes in a argument and url.
+
 def Get_Todo_list(employee_id, url):
     user_id = "users/{}".format(employee_id)
     user_response = requests.get(url + user_id)
@@ -21,12 +23,17 @@ def Get_Todo_list(employee_id, url):
 
     for do in lists:
         if do.get("completed") is True:
-            completed.append(todo.get("title"))
+            completed.append(do.get("title"))
 
-    print("Employee {} is done with tasks({}/{})".format(name.get("name"), len(completed), len(lists)))
+    a = name.get("name")
+    b = len(completed)
+    c = len(lists)
+
+    print("Employee {} is done with tasks({}/{})".format(a, b, c))
 
     for complete in completed:
         print("\t {}".format(complete))
+
 
 if __name__ == "__main__":
     employee_id = sys.argv[1]
