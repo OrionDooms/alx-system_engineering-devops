@@ -32,7 +32,7 @@ def Export_Todo_list(employee_id, url):
                 ]
             }
     with open("{}.json".format(employee_id), 'w') as file:
-        json.dump(json_data, file)
+        json.dump(json_data, file, indent=4)
 
 
 if __name__ == "__main__":
