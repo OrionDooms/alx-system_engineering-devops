@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Task 0.Using the REST API to take in a employee ID that would returns
+"""
+Task 0.Using the REST API to take in a employee ID that would returns
 information.
 Task 1.Using what you did in the task #0, extend your Python script to
 export data in the JSON format.
@@ -21,18 +22,12 @@ def Export_Todo_list(employee_id, url):
     list_response = requests.get(url + "todos", params=params)
     todo_list = list_response.json()
 
-    json_data = {
-            "USER_ID": [
-                {
-                    "task": task.get("title"),
-                    "completed": task.get("completed"),
-                    "username": name
-                }
-                for task in todo_list
-                ]
-            }
     with open("{}.json".format(employee_id), 'w') as file:
-        json.dump(json_data, file, indent=4)
+        json.dump({employee_id: [{
+            "task": task.get("title"),
+            "completed": task.get("completed"),
+            "username": name}
+            for task in todo_list]}, file)
 
 
 if __name__ == "__main__":
