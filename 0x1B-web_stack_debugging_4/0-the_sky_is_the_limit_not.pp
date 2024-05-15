@@ -4,8 +4,8 @@
 # 15 to 4096.
 
 exec { 'fix_nginx' :
-provider => shell,
-command  => 'sudo sed -i "s/15/4096/" /etc/default/nginx',
+command => 'sudo sed -i "s/15/4096/" /etc/default/nginx',
+path    => '/usr/bin:/bin',
 }
 exec {'nginx_restart':
 command  => 'sudo service nginx restart',
