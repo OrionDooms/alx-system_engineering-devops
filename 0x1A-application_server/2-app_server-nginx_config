@@ -1,0 +1,13 @@
+#Serve a page with Nginx
+
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	server_name 35.153.67.140;
+	
+	location = /airbnb-onepage/ {
+		proxy_pass http://127.0.0.1:5000/airbnb-onepage/;      
+        }
+
+}
